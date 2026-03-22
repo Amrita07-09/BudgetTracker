@@ -1,6 +1,6 @@
 const balance = document.getElementById("balance");
-const money_plus = document.getElementById("money-plus");   // 🔥 hyphen
-const money_minus = document.getElementById("money-minus"); // 🔥 hyphen
+const money_plus = document.getElementById("money-plus");   
+const money_minus = document.getElementById("money-minus"); 
 const list = document.getElementById("list");
 const form = document.getElementById("form");
 const text = document.getElementById("text");
@@ -9,7 +9,7 @@ const amount = document.getElementById("amount");
 // store transactions
 let transactions = [];
 
-// 🔹 Add transaction to DOM
+//  Add transaction to DOM
 function addTransactionDOM(transaction){
     const sign = transaction.amount < 0 ? "-" : "+";
 
@@ -28,7 +28,7 @@ function addTransactionDOM(transaction){
     list.appendChild(item);
 }
 
-// 🔹 Update balance, income, expense
+//  Update balance, income, expense
 function updateValues(){
     const amounts = transactions.map(t => Number(t.amount));
 
@@ -47,13 +47,13 @@ function updateValues(){
     money_minus.innerText = `₹${Math.abs(expense).toFixed(2)}`;
 }
 
-// 🔹 Remove transaction
+// Remove transaction
 function removeTransaction(id){
     transactions = transactions.filter(t => t.id !== id);
     init();
 }
 
-// 🔹 Add new transaction
+//Add new transaction
 function addTransaction(e){
     e.preventDefault();
 
@@ -76,14 +76,14 @@ function addTransaction(e){
     amount.value = "";
 }
 
-// 🔹 Initialize app
+//  Initialize app
 function init(){
     list.innerHTML = ""; // clear old data
     transactions.forEach(addTransactionDOM);
     updateValues();
 }
 
-// 🔹 Event listener
+// Event listener
 form.addEventListener("submit", addTransaction);
 
 // start app
