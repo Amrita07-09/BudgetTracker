@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget-Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 >Budget Tracker</h2>
+    <div class="container">
+        <h4>YOUR BALANCE</h4>
+        <h1 id="balance">₹0.00</h1>
+        <div class="inc-exp">
+            <div>
+                <h4>INCOME</h4>
+                <dp id="money-plus" class="money-plus">₹0.00</p>
+            </div>
+            <div>
+                <h4>EXPENSE</h4>
+                <p id="money-minus" class="money-minus">₹0.00</p>
+            </div>
+        </div>
+
+        <h3>History</h3>
+        <hr>
+        <ul id="list" class="list">
+            <li class="minus">
+                <!-- Cash <span>-₹300</span> <button class="delete">X</button> -->
+            </li>
+        </ul>
+
+        <h3>Add New Transition</h3>
+        <hr>
+        <form id="form">
+            <div class="form-control">
+                <label for="text">Text</label>
+                <input type="text" placeholder="Enter Text" id="text">
+            </div>
+            <div class="form-control">
+                <label for="amount">Amount</label>
+                <input type="number" placeholder="Enter amount" id="amount">
+            </div>
+            <button class="btn">
+                All Transactions
+            </button>
+        </form>
+
+    </div>
+    
+    <script src="logic.js" ></script>
+</body>
+</html>
