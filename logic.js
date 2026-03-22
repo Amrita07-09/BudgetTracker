@@ -70,7 +70,7 @@ function addTransaction(e){
 
     transactions.push(transaction);
 
-    init(); // 🔥 refresh everything
+    init(); 
 
     text.value = "";
     amount.value = "";
